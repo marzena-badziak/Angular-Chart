@@ -3,7 +3,33 @@
 }
 body {
   font-family: sans-serif;
-  font-size: 12px;
-  font-size: .75em;
+  background-color: #e6e6e6;
+}
+
+#app-container {
+  text-align: center;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px 0;
   background-color: white;
+  border-radius: 8px;
+}
+
+button {
+  background-color: #0099cc;
+  border: 2px solid #0099cc;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px;
+  color: white;
+  font-weight: bold;
+  outline: none;
+}
+
+button:hover {
+  background-color: #4dd2ff;
+  border: 2px solid #4dd2ff;
+}
+button:active {
+  border: 2px solid #0099cc;
 }
