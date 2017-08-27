@@ -1,7 +1,1 @@
-var chartData = {
-  January: 10,
-  February: 40,
-  March: 20,
-  April: 80,
-  May: 30
-};
+var chartData = [10, 20, 40, 20, 10, 50, 60];

@@ -17,22 +17,17 @@
   <script type="text/javascript" src="js/chartData.js"></script>
 
 
-
 <div id="app-container" ng-controller="ChartController as chart" ng-cloak>
-  Chart data:
-  <p>January: {{chart.data.January}}</p>
-  <p>February: {{chart.data.February}}</p>
-  <p>March: {{chart.data.March}}</p>
 
   <div id="chart-container" ng-show="chart.chartVisible">
     <canvas id="line" class="chart chart-line" chart-data="data"
       chart-labels="labels" chart-series="series" chart-options="options"
-      chart-dataset-override="datasetOverride" chart-click="onClick">
+      chart-dataset-override="datasetOverride" height="400px" width="1000px">
     </canvas>
   </div>
 
 
-<button type="submit" ng-click="chart.displayChart()">Generuj wykres</button>
+<button type="submit" ng-click="chart.generateChart()">Generuj wykres</button>
 
 
 
