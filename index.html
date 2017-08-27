@@ -24,11 +24,15 @@
   <p>February: {{chart.data.February}}</p>
   <p>March: {{chart.data.March}}</p>
 
+  <div id="chart-container" ng-show="chart.chartVisible">
+    <canvas id="line" class="chart chart-line" chart-data="data"
+      chart-labels="labels" chart-series="series" chart-options="options"
+      chart-dataset-override="datasetOverride" chart-click="onClick">
+    </canvas>
+  </div>
 
 
-
-
-<button type="submit">Generuj wykres</button>
+<button type="submit" ng-click="chart.displayChart()">Generuj wykres</button>
 
 
 

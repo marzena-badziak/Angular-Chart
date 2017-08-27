@@ -15,6 +15,11 @@ body {
   border-radius: 8px;
 }
 
+#chart-container {
+  background-color: #d9d9d9;
+  margin: 20px auto;
+}
+
 button {
   background-color: #0099cc;
   border: 2px solid #0099cc;
