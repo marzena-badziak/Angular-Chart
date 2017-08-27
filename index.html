@@ -2,6 +2,7 @@
 <html lang="pl-PL" ng-app="Angular-Chart-Generator">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="icon" type="image/png" href="favicon.ico" sizes="16x16">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
@@ -22,7 +23,7 @@
   <div id="chart-container" ng-show="chart.chartVisible">
     <canvas id="line" class="chart chart-line" chart-data="data"
       chart-labels="labels" chart-series="series" chart-options="options"
-      chart-dataset-override="datasetOverride" height="400px" width="1000px">
+      chart-dataset-override="datasetOverride">
     </canvas>
   </div>
 
