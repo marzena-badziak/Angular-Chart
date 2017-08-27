@@ -16,27 +16,6 @@
     });
 
   app.controller("ChartController", function($scope) {
-    $scope.data = chartData;
-    this.chartVisible = false;
-    this.generateChart = function() {
-      if (!this.chartVisible) {
-        this.chartVisible = true;
-      }
-      this.shuffleData($scope.data);
-    };
-    this.shuffleData = function(array) {
-      var currentIndex = array.length,
-        temporaryValue,
-        randomIndex;
-      while (currentIndex !== 0) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
-      }
-      return array;
-    };
     $scope.labels = [
       "January",
       "February",
@@ -63,6 +42,29 @@
           }
         ]
       }
+    };
+    $scope.data = getRandomChartData($scope.labels.length);
+    this.chartVisible = false;
+    this.generateChart = function() {
+      if (!this.chartVisible) {
+        this.chartVisible = true;
+      }
+      console.log($scope.data);
+      this.shuffleData($scope.data);
+    };
+    this.shuffleData = function(array) {
+      var currentIndex = array.length;
+      var temporaryValue;
+      var randomIndex;
+      while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+      }
+      console.log(array);
+      return array;
     };
   });
 })();

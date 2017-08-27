@@ -1,1 +1,8 @@
-var chartData = [10, 20, 40, 20, 10, 50, 60];
+var getRandomChartData = function(arrLength) {
+  var arr = [];
+  for (i = 0; i < arrLength; i++) {
+    arr.push(Math.floor(Math.random() * 100));
+  }
+
+  return arr;
+};
