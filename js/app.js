@@ -43,13 +43,13 @@
         ]
       }
     };
+
     $scope.data = getRandomChartData($scope.labels.length);
     this.chartVisible = false;
     this.generateChart = function() {
       if (!this.chartVisible) {
         this.chartVisible = true;
       }
-      console.log($scope.data);
       this.shuffleData($scope.data);
     };
     this.shuffleData = function(array) {
@@ -63,7 +63,6 @@
         array[currentIndex] = array[randomIndex];
         array[randomIndex] = temporaryValue;
       }
-      console.log(array);
       return array;
     };
   });
